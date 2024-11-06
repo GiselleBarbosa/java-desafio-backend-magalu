@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class JavaDesafioBackendMagaluApplication {
+public class MagaluMsApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(JavaDesafioBackendMagaluApplication.class, args);
+        SpringApplication.run(MagaluMsApplication.class, args);
     }
 
 }
