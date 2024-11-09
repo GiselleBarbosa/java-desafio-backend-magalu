@@ -2,6 +2,7 @@ package com.barbosa.service;
 
 import com.barbosa.controller.dto.ScheduleNotificationDto;
 import com.barbosa.entity.Notification;
+import com.barbosa.enums.StatusType;
 import com.barbosa.repository.NotificationRepository;
 import org.springframework.stereotype.Service;
 
@@ -26,4 +27,15 @@ public class NotificationService {
                 .orElseThrow(() ->
                         new RuntimeException("Notification not found")));
     }
+
+    public void deleteNotificationByID(Long notificationId) {
+        var notification = findById(notificationId);
+
+        if (notification.isPresent()) {
+            notification.get().setStatus(StatusType.CANCELED.toStatus());
+            notificationRepository.save(notification.get());
+        }
+    }
+
+
 }
