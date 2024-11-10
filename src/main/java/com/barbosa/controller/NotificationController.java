@@ -6,6 +6,8 @@ import com.barbosa.service.NotificationService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/notifications")
 public class NotificationController {
@@ -23,8 +25,14 @@ public class NotificationController {
         return ResponseEntity.accepted().build();
     }
 
+    @GetMapping
+    public ResponseEntity<List<Notification>> getAllNotifications() {
+        var notifications = notificationService.findAll();
+        return ResponseEntity.ok(notifications);
+    }
+
     @GetMapping("/{notificationId}")
-    public ResponseEntity<Notification> getNotification(@PathVariable Long notificationId) {
+    public ResponseEntity<Notification> getNotificationById(@PathVariable Long notificationId) {
         var notification = notificationService.findById(notificationId);
 
         if (notification.isEmpty()) {

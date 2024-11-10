@@ -24,6 +24,10 @@ public class NotificationService {
         notificationRepository.save(dto.toNotification());
     }
 
+    public List<Notification> findAll() {
+        return notificationRepository.findAll();
+    }
+
     public Optional<Notification> findById(Long notificationId) {
         return Optional.ofNullable(notificationRepository
                 .findById(notificationId)
