@@ -9,9 +9,7 @@ public class Status {
 
     @Id
     private Long statusId;
-
     private String description;
-
     private StatusType statusType;
 
     public Status() {

@@ -19,6 +19,7 @@ public class NotificationController {
     @PostMapping
     public ResponseEntity<Void> scheduleNotification(@RequestBody ScheduleNotificationDto dto) {
         notificationService.scheduleNotification(dto);
+
         return ResponseEntity.accepted().build();
     }
 

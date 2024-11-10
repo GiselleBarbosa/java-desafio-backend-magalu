@@ -12,15 +12,11 @@ public class Notification {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long notificationId;
-
     private LocalDateTime dateTime;
-
     private String destination;
-
     private String message;
 
-    public Notification() {
-    }
+    public Notification() {}
 
     @ManyToOne
     @JoinColumn(name = "channel_id")

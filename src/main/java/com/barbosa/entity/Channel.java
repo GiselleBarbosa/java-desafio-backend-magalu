@@ -9,13 +9,10 @@ public class Channel {
 
     @Id
     private Long channelId;
-
     private String description;
-
     private ChannelType channelType;
 
-    public Channel() {
-    }
+    public Channel() {}
 
     public Channel(Long channelId, String description) {
         this.channelId = channelId;
@@ -45,5 +42,4 @@ public class Channel {
     public void setChannelType(ChannelType channelType) {
         this.channelType = channelType;
     }
-
 }

@@ -4,7 +4,6 @@ import com.barbosa.enums.ChannelType;
 import com.barbosa.enums.StatusType;
 import com.barbosa.repository.ChannelRepository;
 import com.barbosa.repository.StatusRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 
